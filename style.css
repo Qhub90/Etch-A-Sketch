@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000000;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+
+}
+
+.grid div{
+    border: 1px solid #000000;
+    flex: 0 0 auto;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    padding: 15px;
+
+}
