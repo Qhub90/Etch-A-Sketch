@@ -2,8 +2,13 @@ const grid = document.querySelector(".grid");
 const clearBtn = document.querySelector("#clear");
 const promptBtn = document.querySelector("#prompt");
 
+let clicked = false;
+
 const colorChange = (e) => {
-  e.target.style.backgroundColor = "green";
+
+    if(clicked) {
+  e.target.style.backgroundColor = "green";        
+    } 
 };
 
 const createGrid = (x) => {
@@ -42,3 +47,17 @@ const gridSize = () => {
 promptBtn.addEventListener("click", gridSize);
 
 createGrid(16);
+
+
+// Create a function that checks if the mouse was clicked inside he grid or not. 
+
+
+const toggleClicked = () => {
+    if(!clicked) {
+        clicked= true
+    } else {
+        clicked = false
+    }
+}
+
+grid.addEventListener("click", toggleClicked);
